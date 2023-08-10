@@ -2,7 +2,7 @@ import math
 print("Hello, you are greeted by a program that solves a quadratic equation")
 
 #assigning a variable to to represent a specific value of precision
-Eps = 0.5
+Eps = 0.001
 
 #receive data from the user
 a = float(input("Enter the coefficient a: "))
