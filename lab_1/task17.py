@@ -1,23 +1,29 @@
-List = input('What`s your list? ').split()
+N = input('What`s your list? ').split()
 
 # use slicing
-print(List[2])
+if len(N) >= 3:
+    print(N[slice(2,None,3)])
+else:
+    print('The list is too short.')
 
 # use while loop
 
-i = 0
+i = 2
 
-while True:
-    i += 1
-    if i == 2:
-        print(List[i])
+while i <= len(N):
+    if len(N) < 3:
+        print('The list is too short.')
         break
+    print(N[i], end=', ')
+    i += 3
+
+print()
 
 # use for loop
 
 offset = 0
 
-for item in List:
-    if offset == 2:
-        print(item)
-    offset += 1
+for offset in range(2, len(N), 3):
+    print(N[offset], end=', ')
+if len(N) < 3:
+    print('The list is too short.')
