@@ -1,4 +1,4 @@
-def func(text):
+def reverse_string(text):
     # Divide the line into words by spaces
     word = text.split()
 
@@ -11,6 +11,6 @@ def func(text):
     return output
 
 
-text1 = input("Write your string: ")
-result = func(text1)
+text = input("Write your string: ")
+result = reverse_string(text)
 print(result)

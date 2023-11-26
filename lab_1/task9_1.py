@@ -1,14 +1,14 @@
-def func(n):
+def multiplication_table(n):
     i = 1
-    while i <= N:
+    while i <= n:
         j = 1
-        while j <= N:
+        while j <= n:
             print(i*j, end=' ')
             j += 1
         print()
 
         i += 1
 
-N = int(input("What`s N "))
-func(N)
 
+n = int(input("What`s N "))
+multiplication_table(n)
