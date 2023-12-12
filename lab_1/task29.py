@@ -1,25 +1,35 @@
 import argparse
 import sys
 
-# using sys module
-
-x = sys.argv[1]
+# define the reading file function
 
 
-def main(file):
-    with open(file, 'r') as f:
-        output = f.read()
+def read_file(file_name):
+    with open(file_name, 'r') as file:
+        output = file.read()
         print(output)
 
+# using sys module
 
-main(x)
+
+def sys_case():
+    x = sys.argv[1]
+    return x
+
 
 # using argparse module
 
-parser = argparse.ArgumentParser()
 
-parser.add_argument('file')
+def argparse_case():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-f', '--file', help="open your file")
+    args = parser.parse_args()
+    return args.file
 
-args = parser.parse_args()
 
-main(args.file)
+def main():
+    argparse_arg = argparse_case()
+    read_file(argparse_arg)
+
+
+main()
