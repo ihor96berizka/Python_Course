@@ -1,5 +1,3 @@
-N = int(input("What`s N?"))
-
 # using while loop
 
 
@@ -9,22 +7,16 @@ def fib_iterative(n):
     while i <= n:
         f.append(f[i-1] + f[i-2])
         i += 1
-    print(f)
-
-
-fib_iterative(N)
-
+    return f
 
 # using for loop
+
 
 def fib_iterative2(n):
     f = [0, 1]
     for i in range(2, n+1):
         f.append(f[i-1] + f[i-2])
-    return print(f)
-
-
-fib_iterative2(N)
+    return f
 
 # using recursion
 
@@ -38,6 +30,15 @@ def fib_recursive(n, f=[0, 1]):
         f.append(f[-1] + f[-2])
         return fib_recursive(n-1, f)
 
+# main function
 
-result = fib_recursive(N)
-print(result)
+
+def main():
+    n = int(input("What`s N?"))
+    result1 = fib_iterative(n)
+    result2 = fib_iterative2(n)
+    result3 = fib_recursive(n)
+    print(result1, result2, result3, sep='\n')
+
+
+main()
