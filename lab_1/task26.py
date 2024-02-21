@@ -12,14 +12,13 @@ def insertion_sort(list_num):
             list_num[i + 1] = list_num[i]
             i = i - 1
         list_num[i + 1] = key
-    return list_num
 
 
 def main():
     num = data_in()
     print("Incoming data: ", num)
-    result = insertion_sort(num)
-    print("Sorted data: ", result)
+    insertion_sort(num)
+    print("Sorted data: ", num)
 
 
 main()
