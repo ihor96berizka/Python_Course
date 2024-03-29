@@ -44,7 +44,7 @@ def main():
         low = 0
         high = len(list_to_be_sorted_3) - 1
         start_time = datetime.datetime.now()
-        quick_sort.quick_sort(list_to_be_sorted_3, low, high)
+        quick_sort.random_quick_sort(list_to_be_sorted_3, low, high)
         end_time = datetime.datetime.now()
         list_sizes_quick_sort.append(current_size)
         execution_time_quick_sort.append(end_time - start_time)
@@ -68,4 +68,5 @@ def main():
     plt.show()
 
 
-main()
+if __name__ == '__main__':
+    main()
