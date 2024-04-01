@@ -19,13 +19,13 @@ def random_partition(arr, low, high):
     return partition(arr, low, high)
 
 
-def quick_sort(arr, low, high):
+def random_quick_sort(arr, low, high):
     if len(arr) == 1:
         return arr
     if low < high:
         q = random_partition(arr, low, high)
 
-        quick_sort(arr, low, q - 1)
-        quick_sort(arr, q + 1, high)
+        random_quick_sort(arr, low, q - 1)
+        random_quick_sort(arr, q + 1, high)
 
     return arr
